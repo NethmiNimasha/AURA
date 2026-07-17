@@ -1,0 +1,20 @@
+﻿src/App.tsx(11,20): error TS1484: 'Product' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/App.tsx(12,18): error TS6133: 'Star' is declared but its value is never read.
+src/App.tsx(12,24): error TS6133: 'Sparkles' is declared but its value is never read.
+src/App.tsx(12,34): error TS6133: 'ArrowRight' is declared but its value is never read.
+src/App.tsx(12,46): error TS6133: 'ShieldCheck' is declared but its value is never read.
+src/App.tsx(12,59): error TS6133: 'Mail' is declared but its value is never read.
+src/components/CartDrawer.tsx(3,10): error TS1484: 'Product' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/DesignStudio.tsx(2,10): error TS6133: 'Wand2' is declared but its value is never read.
+src/components/DesignStudio.tsx(2,34): error TS6133: 'MapPin' is declared but its value is never read.
+src/components/DesignStudio.tsx(2,75): error TS6133: 'Diamond' is declared but its value is never read.
+src/components/Footer.tsx(2,16): error TS2305: Module '"lucide-react"' has no exported member 'Facebook'.
+src/components/Footer.tsx(2,26): error TS2305: Module '"lucide-react"' has no exported member 'Instagram'.
+src/components/Hero.tsx(2,22): error TS6133: 'ShieldCheck' is declared but its value is never read.
+src/components/ProductCard.tsx(3,10): error TS1484: 'Product' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/ProductModal.tsx(3,10): error TS1484: 'Product' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/ProductModal.tsx(44,11): error TS6133: 'formattedPrice' is declared but its value is never read.
+src/components/VirtualTryOn.tsx(2,41): error TS6133: 'ShoppingBag' is declared but its value is never read.
+src/components/VirtualTryOn.tsx(2,54): error TS6133: 'Maximize2' is declared but its value is never read.
+src/components/VirtualTryOn.tsx(3,20): error TS1484: 'Product' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/WishlistDrawer.tsx(3,10): error TS1484: 'Product' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
