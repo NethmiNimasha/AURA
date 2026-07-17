@@ -1,17 +1,9 @@
 import React, { createContext, useContext, useEffect, useLayoutEffect, useState } from 'react';
 
-type Theme = 'light' | 'dark';
-
-interface ThemeContextValue {
-  theme: Theme;
-  toggleTheme: () => void;
-  setTheme: (theme: Theme) => void;
-}
-
-const ThemeContext = createContext<ThemeContextValue | undefined>(undefined);
+const ThemeContext = createContext(undefined);
 const STORAGE_KEY = 'aura-theme';
 
-function getInitialTheme(): Theme {
+function getInitialTheme() {
   if (typeof window === 'undefined') return 'dark';
   try {
     const saved = localStorage.getItem(STORAGE_KEY);
@@ -22,7 +14,7 @@ function getInitialTheme(): Theme {
   return 'dark';
 }
 
-function applyTheme(theme: Theme) {
+function applyTheme(theme) {
   const root = document.documentElement;
   root.classList.remove('light', 'dark');
   root.classList.add(theme);
@@ -35,8 +27,8 @@ function applyTheme(theme: Theme) {
   }
 }
 
-export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [theme, setThemeState] = useState<Theme>(getInitialTheme);
+export const ThemeProvider = ({ children }) => {
+  const [theme, setThemeState] = useState(getInitialTheme);
 
   // Apply before paint so the UI does not flash the wrong theme
   useLayoutEffect(() => {
@@ -47,7 +39,7 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
     applyTheme(theme);
   }, [theme]);
 
-  const setTheme = (next: Theme) => {
+  const setTheme = (next) => {
     setThemeState(next);
     applyTheme(next);
   };

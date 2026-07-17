@@ -2,15 +2,7 @@ import React, { useState } from 'react';
 import { Search, Menu, X, Sparkles, Sun, Moon } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext';
 
-interface HeaderProps {
-  activeCategory: string;
-  setActiveCategory: (cat: string) => void;
-  searchQuery: string;
-  setSearchQuery: (query: string) => void;
-  onCatalogClick: () => void;
-}
-
-export const Header: React.FC<HeaderProps> = ({
+export const Header = ({
   activeCategory,
   setActiveCategory,
   searchQuery,
@@ -21,7 +13,7 @@ export const Header: React.FC<HeaderProps> = ({
   const { theme, toggleTheme } = useTheme();
   const categories = ['All', 'Rings', 'Necklaces', 'Earrings', 'Bracelets'];
 
-  const handleCategoryClick = (cat: string) => {
+  const handleCategoryClick = (cat) => {
     setActiveCategory(cat);
     setMobileMenuOpen(false);
     onCatalogClick();

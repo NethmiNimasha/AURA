@@ -1,11 +1,7 @@
 import React from 'react';
 import { ArrowRight, Sparkles, Star } from 'lucide-react';
 
-interface HeroProps {
-  onExploreClick: () => void;
-}
-
-export const Hero: React.FC<HeroProps> = ({ onExploreClick }) => {
+export const Hero = ({ onExploreClick }) => {
   return (
     <div className="relative min-h-[70vh] overflow-hidden bg-neutral-100 dark:bg-neutral-950 flex items-center transition-colors">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-amber-200/40 dark:from-amber-950/20 via-neutral-100 dark:via-neutral-950 to-neutral-50 dark:to-neutral-950 z-10" />

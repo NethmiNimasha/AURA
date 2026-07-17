@@ -1,16 +1,7 @@
 import React from 'react';
 import { X, Heart, ShoppingBag, Trash2 } from 'lucide-react';
-import type { Product } from '../data/products';
 
-interface WishlistDrawerProps {
-    isOpen: boolean;
-    onClose: () => void;
-    wishlistItems: Product[];
-    onRemoveItem: (productId: string) => void;
-    onAddToCart: (product: Product) => void;
-}
-
-export const WishlistDrawer: React.FC<WishlistDrawerProps> = ({
+export const WishlistDrawer = ({
     isOpen,
     onClose,
     wishlistItems,
@@ -19,7 +10,7 @@ export const WishlistDrawer: React.FC<WishlistDrawerProps> = ({
 }) => {
     if (!isOpen) return null;
 
-    const formatPrice = (amount: number) => {
+    const formatPrice = (amount) => {
         return new Intl.NumberFormat('en-US', {
             style: 'currency',
             currency: 'USD',

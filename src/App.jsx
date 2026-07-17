@@ -4,18 +4,18 @@ import { Hero } from './components/Hero';
 import { ProductCard } from './components/ProductCard';
 import { ProductModal } from './components/ProductModal';
 import { Footer } from './components/Footer';
-import { PRODUCTS, type Product } from './data/products';
+import { PRODUCTS } from './data/products';
 import { useTheme } from './context/ThemeContext';
 import { Filter } from 'lucide-react';
 import './App.css';
 
 function App() {
   const { theme } = useTheme();
-  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
-  const [activeCategory, setActiveCategory] = useState<string>('All');
-  const [searchQuery, setSearchQuery] = useState<string>('');
-  const [selectedMaterial, setSelectedMaterial] = useState<string>('All');
-  const [sortBy, setSortBy] = useState<string>('featured');
+  const [selectedProduct, setSelectedProduct] = useState(null);
+  const [activeCategory, setActiveCategory] = useState('All');
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedMaterial, setSelectedMaterial] = useState('All');
+  const [sortBy, setSortBy] = useState('featured');
 
   const scrollToCatalog = () => {
     document.getElementById('catalog')?.scrollIntoView({ behavior: 'smooth' });

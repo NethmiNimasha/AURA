@@ -1,18 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { X, Star, ShieldCheck, Truck, Clock, RefreshCw } from 'lucide-react';
-import type { Product } from '../data/products';
 import { formatPrice, formatPriceAdjustment } from '../utils/currency';
 
-interface ProductModalProps {
-  product: Product | null;
-  isOpen: boolean;
-  onClose: () => void;
-}
-
-export const ProductModal: React.FC<ProductModalProps> = ({ product, isOpen, onClose }) => {
-  const [selectedMetal, setSelectedMetal] = useState<string>('');
-  const [selectedSize, setSelectedSize] = useState<string>('7');
-  const [activeTab, setActiveTab] = useState<'details' | 'shipping' | 'care'>('details');
+export const ProductModal = ({ product, isOpen, onClose }) => {
+  const [selectedMetal, setSelectedMetal] = useState('');
+  const [selectedSize, setSelectedSize] = useState('7');
+  const [activeTab, setActiveTab] = useState('details');
 
   useEffect(() => {
     if (product) {
@@ -22,7 +15,7 @@ export const ProductModal: React.FC<ProductModalProps> = ({ product, isOpen, onC
   }, [product]);
 
   useEffect(() => {
-    const handleEscape = (e: KeyboardEvent) => {
+    const handleEscape = (e) => {
       if (e.key === 'Escape') onClose();
     };
     if (isOpen) {
@@ -198,7 +191,7 @@ export const ProductModal: React.FC<ProductModalProps> = ({ product, isOpen, onC
 
               <div className="border-t border-neutral-200 dark:border-neutral-900 pt-4">
                 <div className="flex gap-6 border-b border-neutral-200 dark:border-neutral-900 pb-2">
-                  {(['details', 'shipping', 'care'] as const).map((tab) => (
+                  {['details', 'shipping', 'care'].map((tab) => (
                     <button
                       key={tab}
                       onClick={() => setActiveTab(tab)}

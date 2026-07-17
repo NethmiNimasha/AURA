@@ -1,21 +1,4 @@
-export interface Product {
-    id: string;
-    name: string;
-    category: 'Rings' | 'Necklaces' | 'Earrings' | 'Bracelets';
-    price: number;
-    originalPrice?: number;
-    description: string;
-    material: 'Yellow Gold' | 'White Gold' | 'Rose Gold' | 'Platinum';
-    image: string;
-    rating: number;
-    reviewsCount: number;
-    details: string[];
-    inStock: boolean;
-    carat?: string;
-    clarity?: string;
-}
-
-export const PRODUCTS: Product[] = [
+export const PRODUCTS = [
     {
         id: 'aurelia-solitaire',
         name: 'The Aurelia Solitaire Ring',

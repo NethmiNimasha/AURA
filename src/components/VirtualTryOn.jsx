@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { Camera, Sparkles, AlertCircle, Check } from 'lucide-react';
-import { PRODUCTS, type Product } from '../data/products';
+import { PRODUCTS } from '../data/products';
 
-export const VirtualTryOn: React.FC = () => {
+export const VirtualTryOn = () => {
     const tryOnProducts = PRODUCTS.slice(0, 4); // Rings, Necklaces, Earrings, Bracelets
-    const [selectedProduct, setSelectedProduct] = useState<Product>(tryOnProducts[0]);
-    const [skinColor, setSkinColor] = useState<'fair' | 'medium' | 'olive' | 'dark'>('medium');
+    const [selectedProduct, setSelectedProduct] = useState(tryOnProducts[0]);
+    const [skinColor, setSkinColor] = useState('medium');
     const [imageScale, setImageScale] = useState(100);
     const [activeAdjust, setActiveAdjust] = useState(0); // rotation angle
     const [snapshotTaken, setSnapshotTaken] = useState(false);
@@ -97,7 +97,7 @@ export const VirtualTryOn: React.FC = () => {
             case 'Earrings':
                 return (
                     <div className="absolute inset-0 flex items-center justify-center p-8 transition-colors duration-500">
-                        {/* Profile silhouette */}
+                        {/* Profile profile */}
                         <div className="relative w-56 h-72 flex justify-center items-center">
                             {/* Face/Ear shape */}
                             <div
@@ -301,7 +301,7 @@ export const VirtualTryOn: React.FC = () => {
                             {skinTones.map((tone) => (
                                 <button
                                     key={tone.value}
-                                    onClick={() => setSkinColor(tone.value as any)}
+                                    onClick={() => setSkinColor(tone.value)}
                                     className={`w-full flex items-center justify-between p-3 rounded-xl border text-left transition ${skinColor === tone.value
                                             ? 'border-purple-500 bg-purple-500/5 text-white'
                                             : 'border-neutral-900 bg-neutral-950 text-neutral-400 hover:border-neutral-800'

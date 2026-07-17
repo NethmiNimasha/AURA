@@ -1,24 +1,7 @@
 import React, { useState } from 'react';
 import { X, ShoppingBag, Plus, Minus, Trash2, ShieldCheck, ArrowRight, Sparkles } from 'lucide-react';
-import type { Product } from '../data/products';
 
-interface CartItem {
-    id: string; // Unique configuration id, e.g. productId-metal-size
-    product: Product;
-    quantity: number;
-    metal: string;
-    size?: string;
-}
-
-interface CartDrawerProps {
-    isOpen: boolean;
-    onClose: () => void;
-    cartItems: CartItem[];
-    onUpdateQuantity: (id: string, newQty: number) => void;
-    onRemoveItem: (id: string) => void;
-}
-
-export const CartDrawer: React.FC<CartDrawerProps> = ({
+export const CartDrawer = ({
     isOpen,
     onClose,
     cartItems,
@@ -28,7 +11,7 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
     const [promoCode, setPromoCode] = useState('');
     const [discountPercent, setDiscountPercent] = useState(0);
     const [promoApplied, setPromoApplied] = useState(false);
-    const [checkoutStep, setCheckoutStep] = useState<'cart' | 'shipping' | 'complete'>('cart');
+    const [checkoutStep, setCheckoutStep] = useState('cart');
     const [shippingForm, setShippingForm] = useState({
         name: '',
         email: '',
@@ -39,7 +22,7 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
 
     if (!isOpen) return null;
 
-    const handleApplyPromo = (e: React.FormEvent) => {
+    const handleApplyPromo = (e) => {
         e.preventDefault();
         if (promoCode.trim().toUpperCase() === 'AURA10') {
             setDiscountPercent(10);
@@ -54,7 +37,7 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
     const shipping = subtotal > 5000 ? 0 : 150;
     const grandTotal = subtotal - discount + shipping;
 
-    const formatPrice = (amount: number) => {
+    const formatPrice = (amount) => {
         return new Intl.NumberFormat('en-US', {
             style: 'currency',
             currency: 'USD',
@@ -62,7 +45,7 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
         }).format(amount);
     };
 
-    const handleCheckoutSubmit = (e: React.FormEvent) => {
+    const handleCheckoutSubmit = (e) => {
         e.preventDefault();
         setCheckoutStep('complete');
     };

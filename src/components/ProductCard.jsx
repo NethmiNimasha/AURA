@@ -1,14 +1,8 @@
 import React from 'react';
 import { Star, Eye } from 'lucide-react';
-import type { Product } from '../data/products';
 import { formatPrice } from '../utils/currency';
 
-interface ProductCardProps {
-  product: Product;
-  onClick: () => void;
-}
-
-export const ProductCard: React.FC<ProductCardProps> = ({ product, onClick }) => {
+export const ProductCard = ({ product, onClick }) => {
   const formattedPrice = formatPrice(product.price);
   const formattedOriginalPrice = product.originalPrice ? formatPrice(product.originalPrice) : null;
 

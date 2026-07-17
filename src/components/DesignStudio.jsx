@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Crown, Sparkles, Check, ChevronRight, Calculator } from 'lucide-react';
 
-export const DesignStudio: React.FC = () => {
-    const [step, setStep] = useState<number>(1);
+export const DesignStudio = () => {
+    const [step, setStep] = useState(1);
     const [selections, setSelections] = useState({
         metal: 'Platinum',
         carat: '2.0ct',
@@ -37,15 +37,15 @@ export const DesignStudio: React.FC = () => {
         { name: 'Pear Cut', value: 'Pear', factor: 0.88, icon: '💧' }
     ];
 
-    const handleSelectMetal = (val: string) => {
+    const handleSelectMetal = (val) => {
         setSelections({ ...selections, metal: val });
     };
 
-    const handleSelectCarat = (val: string) => {
+    const handleSelectCarat = (val) => {
         setSelections({ ...selections, carat: val });
     };
 
-    const handleSelectShape = (val: string) => {
+    const handleSelectShape = (val) => {
         setSelections({ ...selections, shape: val });
     };
 
@@ -61,12 +61,12 @@ export const DesignStudio: React.FC = () => {
         return Math.round((metalVal + caratVal) * shapeMultiplier);
     };
 
-    const handleConsultSubmit = (e: React.FormEvent) => {
+    const handleConsultSubmit = (e) => {
         e.preventDefault();
         setSubmitted(true);
     };
 
-    const formatPrice = (amount: number) => {
+    const formatPrice = (amount) => {
         return new Intl.NumberFormat('en-US', {
             style: 'currency',
             currency: 'USD',
@@ -135,7 +135,7 @@ export const DesignStudio: React.FC = () => {
                                         >
                                             <div className="flex items-center justify-between w-full">
                                                 <span className="text-sm font-semibold text-white uppercase tracking-wider">{m.name}</span>
-                                                {selections.metal === m.value && <Check className="h-4 w-4 text-amber-400" />}
+                                                {selections.metal === m.value && <Check className="h-4 w-4 text-amber-400 text-right" />}
                                             </div>
                                             <p className="text-[11px] text-neutral-500 font-light leading-relaxed my-1">
                                                 {m.desc}
