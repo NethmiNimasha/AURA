@@ -70,11 +70,7 @@ export const ProductCard = ({ product, onClick }) => {
                 </span>
               )}
             </div>
-            {product.carat && (
-              <span className="block text-[9px] text-neutral-400 dark:text-neutral-500 font-medium uppercase mt-0.5">
-                {product.carat}
-              </span>
-            )}
+           
           </div>
         </div>
       </div>
