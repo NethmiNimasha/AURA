@@ -19,8 +19,7 @@ export const PRODUCTS = [
             'Metal: 18k Solid Yellow Gold'
         ],
         inStock: true,
-        carat: '2.05ct',
-        clarity: 'VVS1'
+      
     },
     {
         id: 'royal-sapphire',
@@ -40,8 +39,7 @@ export const PRODUCTS = [
             'Length: 16-inch custom adjustable chain'
         ],
         inStock: true,
-        carat: '5.20ct Sapphire / 12.4ct Dia',
-        clarity: 'IF (Accent Diamonds)'
+      
     },
     {
         id: 'emerald-cascade',
@@ -61,8 +59,7 @@ export const PRODUCTS = [
             'Height: 32mm total drop length'
         ],
         inStock: true,
-        carat: '4.80ct Emerald',
-        clarity: 'VS2'
+        
     },
     {
         id: 'imperia-bangle',
@@ -83,8 +80,7 @@ export const PRODUCTS = [
             'Clasp: Double-safety pressure clasp'
         ],
         inStock: true,
-        carat: '3.85ct',
-        clarity: 'VS1'
+
     },
     {
         id: 'eternal-vine',
@@ -103,8 +99,7 @@ export const PRODUCTS = [
             'Perfect for stacking with solitaire designs'
         ],
         inStock: true,
-        carat: '0.85ct',
-        clarity: 'VVS2'
+      
     },
     {
         id: 'lumiere-studs',
@@ -124,8 +119,7 @@ export const PRODUCTS = [
             'Fastening: Screw-back posts for high security'
         ],
         inStock: true,
-        carat: '1.50ct (Total)',
-        clarity: 'VVS2'
+        
     },
     {
         id: 'aria-pearl-necklace',
@@ -145,8 +139,7 @@ export const PRODUCTS = [
             'Chain: 18-inch 18k Rose Gold Box Chain'
         ],
         inStock: false,
-        carat: '11.2mm Pearl',
-        clarity: 'Slightly spotted (natural)'
+      
     },
     {
         id: 'stellar-cuff',
@@ -165,7 +158,5 @@ export const PRODUCTS = [
             'Width: 15mm open-ended cuff style'
         ],
         inStock: true,
-        carat: '1.75ct',
-        clarity: 'VS1'
     }
 ];
