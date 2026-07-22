@@ -76,17 +76,6 @@ export const ProductCard = ({ product, onClick }) => {
               </span>
             )}
           </div>
-
-          <button
-            type="button"
-            onClick={(e) => {
-              e.stopPropagation();
-              onClick();
-            }}
-            className="flex h-9 items-center justify-center rounded-full px-4 text-[10px] font-bold tracking-widest uppercase transition-all duration-300 bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 text-neutral-700 dark:text-neutral-200 hover:bg-amber-500 hover:text-neutral-950 hover:border-amber-500"
-          >
-            Details
-          </button>
         </div>
       </div>
     </div>

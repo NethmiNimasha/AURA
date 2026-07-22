@@ -58,7 +58,7 @@ function App() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
               { label: 'Royal Solitaires', image: '/gold_ring_hero.png', category: 'Rings' },
-              { label: 'Sapphire Cascades', image: '/necklace_category.png', category: 'Necklaces' },
+              { label: 'Sapphire Cascades', image: '/sapphire_necklace.png', category: 'Necklaces' },
               { label: 'Emerald Halos', image: '/earrings_category.png', category: 'Earrings' },
               { label: 'Solid Gold Bangles', image: '/bracelet_category.png', category: 'Bracelets' },
             ].map((catItem) => (

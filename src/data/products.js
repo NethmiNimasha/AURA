@@ -29,7 +29,7 @@ export const PRODUCTS = [
         price: 28900,
         description: 'A stellar showcase of high jewelry, featuring a magnificent pear-cut Royal Blue Ceylon sapphire suspended from a cascading collar of round and marquise diamonds set in pure platinum.',
         material: 'Platinum',
-        image: '/necklace_category.png',
+        image: '/sapphire_necklace.png',
         rating: 5.0,
         reviewsCount: 18,
         details: [
@@ -93,7 +93,7 @@ export const PRODUCTS = [
         price: 4200,
         description: 'An organic, nature-inspired wedding or anniversary band styled as interlocking vines, handcrafted in warm 18k rose gold and speckled with tiny brilliant round cut diamonds.',
         material: 'Rose Gold',
-        image: '/gold_ring_hero.png',
+        image: '/rose_gold_vine_ring.png',
         rating: 4.7,
         reviewsCount: 22,
         details: [
@@ -113,7 +113,7 @@ export const PRODUCTS = [
         price: 6500,
         description: 'A timeless staple of any fine jewelry collection: matched round brilliant-cut diamonds held in simple, minimalist four-prong baskets of polished 18k white gold.',
         material: 'White Gold',
-        image: '/earrings_category.png',
+        image: '/white_gold_studs.png',
         rating: 4.9,
         reviewsCount: 88,
         details: [
@@ -135,7 +135,7 @@ export const PRODUCTS = [
         originalPrice: 4200,
         description: 'A select, high-lustre golden South Sea pearl floats gracefully suspended from an 18k rose gold box-chain, topped with a micro-diamond teardrop bale.',
         material: 'Rose Gold',
-        image: '/necklace_category.png',
+        image: '/golden_pearl_necklace.png',
         rating: 4.6,
         reviewsCount: 15,
         details: [
